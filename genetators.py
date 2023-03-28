@@ -51,12 +51,13 @@ class Title:
 
 
 class Path:
+
     
     def __init__(self, title: Title):
+        self.__generate_history_dir()
         self.title = str(title)
-        self.generate()
-        self.path = str(os.path.join(Location.history.value, self.title)) \
-        if os.path.isdir(os.path.join(Location.history.value, self.title)) else None 
+        self.__generate_png_and_json_dir()
+        self.path = str(os.path.join(Location.history.value, self.title))
         
         # extensions
         self.json = os.path.join(self.path, f'{self.title}.json') 
@@ -67,8 +68,15 @@ class Path:
     def __str__(self) -> str:
         return self.path
 
-    def generate(self) -> os:
+    def __generate_png_and_json_dir(self) -> None:
         os.mkdir(os.path.join(Location.history.value, str(self.title)))
+
+    def __generate_history_dir(self) -> None:
+        """Creates the history directory to store the json and png files."""
+        if not os.path.isdir(Location.history.value):
+            os.mkdir(Location.history.value)
+
+
 
 
 class Details:
@@ -77,10 +85,10 @@ class Details:
         self.path = path
         self.title = os.path.basename(self.path)
         self.content = content
-        self.details = self.__fillDetails()
+        self.details = self.__fill_details()
 
 
-    def __fillDetails(self) -> None:
+    def __fill_details(self) -> dict:
         return asdict(DetailsScheme(title=self.title, content=self.content, time=str(datetime.datetime.now())))
 
     def save(self) -> None:
