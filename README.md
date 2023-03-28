@@ -4,11 +4,11 @@
 
 ## Installation
 To install `Q-share` you can clone the repo:
-```
+```bash
 git clone https://github.com/bashar-mithan/Q-share.git
 ```
 Then you need to install the requirements.
-```
+```bash
 pip3 install -r requirements.txt
 ```
 ## Building
@@ -27,3 +27,5 @@ You can use `Q-share` by simply opening up your terminal and typing `qshare` fol
 ```
 qshare google.com
 ```
+### Warning
+The project only works on linux so far. Still working on making it working on Windows and macos.
