@@ -1,6 +1,6 @@
 # Q-share
 ## Introduction
-`q-share` allows you to share links between mobiles and computers easliy using qrcodes.
+`q-share` allows you to share links between mobiles and computers easliy using qr codes.
 
 ## Installation
 To install `Q-share` you can clone the repo:
