@@ -23,7 +23,7 @@ And the excute the file.
 python3 build.py
 ```
 ## Usage
-You can use `Q-share` by simply opening up you terminal and typing `qshare` followed by the url you want to generate a qrcode for.
+You can use `Q-share` by simply opening up your terminal and typing `qshare` followed by the url you want to generate a qrcode for.
 ```
 qshare google.com
 ```
