@@ -18,7 +18,7 @@ First get in the project directory
 ```
 cd Q-share
 ```
-And the excute the file.
+And then excute the file.
 ```
 python3 build.py
 ```
